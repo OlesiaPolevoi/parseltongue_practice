@@ -87,51 +87,80 @@
 
 
 
-#! 2. Recursion Practice: Sum of numbers 1..n
+# #! #2. Recursion Practice: Sum of numbers 1..n
 
-# Task:
-# Write a function sum_n(n) that returns the sum of numbers from 1 up to n.
-# Example: sum_n(4) = 10
-#
-# Input: integer n (e.g., 4)
-# Output: integer (the sum from 1 through n, e.g., 10)
-#
-# ----------------------------
-# What is this problem?
-# Add all numbers from 1 to n:
-#
-# Example:
-# sum_n(4) = 1 + 2 + 3 + 4 = 10
-# sum_n(5) = 1 + 2 + 3 + 4 + 5 = 15
-#
-# ----------------------------
-# Recursive pattern:
-# - Recursive case: sum_n(n) = n + sum_n(n-1)
-# - Base case: sum_n(1) = 1
-#
-# Example breakdown:
-# sum_n(4) = 4 + sum_n(3)
-# sum_n(3) = 3 + sum_n(2)
-# sum_n(2) = 2 + sum_n(1)
-# sum_n(1) = 1   <-- base case
-#
-# Then recursion "unwinds":
-# sum_n(2) = 2 + 1 = 3
-# sum_n(3) = 3 + 3 = 6
-# sum_n(4) = 4 + 6 = 10
-# ----------------------------
+# # Task:
+# # Write a function sum_n(n) that returns the sum of numbers from 1 up to n.
+# # Example: sum_n(4) = 10
+# #
+# # Input: integer n (e.g., 4)
+# # Output: integer (the sum from 1 through n, e.g., 10)
+# #
+# # ----------------------------
+# # What is this problem?
+# # Add all numbers from 1 to n:
+# #
+# # Example:
+# # sum_n(4) = 1 + 2 + 3 + 4 = 10
+# # sum_n(5) = 1 + 2 + 3 + 4 + 5 = 15
+# #
+# # ----------------------------
+# # Recursive pattern:
+# # - Recursive case: sum_n(n) = n + sum_n(n-1)
+# # - Base case: sum_n(1) = 1
+# #
+# # Example breakdown:
+# # sum_n(4) = 4 + sum_n(3)
+# # sum_n(3) = 3 + sum_n(2)
+# # sum_n(2) = 2 + sum_n(1)
+# # sum_n(1) = 1   <-- base case
+# #
+# # Then recursion "unwinds":
+# # sum_n(2) = 2 + 1 = 3
+# # sum_n(3) = 3 + 3 = 6
+# # sum_n(4) = 4 + 6 = 10
+# # ----------------------------
 
-def sum_n(n):
-    """
-    Returns the sum of numbers from 1 up to n using recursion.
-    Base case: if n == 1, return 1
-    Recursive case: return n + sum_n(n-1)
-    """
-    if n <= 1:  # base case
-        return 1
-    return n + sum_n(n - 1)  # recursive case
+# def sum_n(n):
+#     """
+#     Returns the sum of numbers from 1 up to n using recursion.
+#     Base case: if n == 1, return 1
+#     Recursive case: return n + sum_n(n-1)
+#     """
+#     if n <= 1:  # base case
+#         return 1
+#     return n + sum_n(n - 1)  # recursive case
 
 
-# Example runs
-print(sum_n(4))  # Expected output: 10
-print(sum_n(5))  # Expected output: 15
+# # Example runs
+# print(sum_n(4))  # Expected output: 10
+# print(sum_n(5))  # Expected output: 15
+
+
+#! #3 Fibonacci
+Write fib(n) that returns the n-th Fibonacci number (what we just did).
+
+🔹 Intermediate Level
+
+Reverse a string
+Write a function reverse(s) that returns the reversed string using recursion.
+Example: reverse("cat") → "tac"
+
+Count digits
+Write a function count_digits(n) that returns how many digits are in n.
+Example: count_digits(12345) → 5
+
+Check palindrome
+Write a recursive function is_palindrome(s) that returns True if a string is the same forwards and backwards.
+Example: "racecar" → True
+
+🔹 Fun Challenge
+
+Flatten a nested list
+Example: [1, [2, [3, 4]], 5] → [1, 2, 3, 4, 5]
+
+👉 The trick with recursion:
+
+Define the base case (when to stop).
+
+Define the recursive step (how to reduce the problem to a smaller version of itself).
